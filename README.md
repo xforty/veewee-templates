@@ -33,3 +33,12 @@ with Vagrant.
 
 1. `vagrant box add [my_box_name] [url_or_filepath_to_basebox]`
     * [More documentation for vagrant boxes](http://vagrantup.com/docs/boxes.html)
+
+### Example ###
+
+    $ git clone git://github.com/xforty/veewee-templates.git
+    $ cd veewee-templates
+    $ veewee vbox build ubuntu-10.04.4-server-amd64
+    $ veewee vbox validate ubuntu-10.04.4-server-amd64
+    $ vagrant basebox export ubuntu-10.04.4-server-amd64
+    $ vagrant box add ubuntu-10.04.4-server-amd64 ubuntu-10.04.4-server-amd64.box
