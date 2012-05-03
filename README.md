@@ -1,7 +1,10 @@
 veewee-templates
 ================
 
-Repository for veewee templates for a VirtualBox and Vagrant environment.
+Repository of veewee templates to build base boxes for a VirtualBox
+and Vagrant environment.  This project also includes simplified
+instructions for building a base box and making it available for use
+with Vagrant.
 
 ### Install Required Software ###
 
