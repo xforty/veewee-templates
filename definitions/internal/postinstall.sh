@@ -51,14 +51,12 @@ bash -c '
  curl -kL cpanmin.us | perl - -n App::cpanminus
 '
 
-pushd /tmp
+cd /tmp
 mkdir RT_install; cd RT_install
 curl http://download.bestpractical.com/pub/rt/release/rt-4.0.5.tar.gz | tar zx
 cd rt-4.0.5
 ./configure --enable-devel-mode --enable-layout=inplace --enable-graphviz --enable-gd --enable-gpg
 RT_FIX_DEPS_CMD='cpanm --quiet --notest' make fixdeps
-rm -rf rt-4.0.5
-popd
 rm -rf /tmp/RT_install
 
 ###############################
