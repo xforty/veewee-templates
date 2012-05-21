@@ -43,27 +43,11 @@ chown -R vagrant /home/vagrant/.ssh
 ###############################
 
 # Some dev libraries
-apt-get -y install libxml2-dev graphviz libgd2-noxpm-dev libmysqlclient-dev
-
-export INSTALL_PERL_VERSION=5.14.2
-export PERLBREW_ROOT=/opt/perlbrew
-
-curl -Lk http://xrl.us/perlbrewinstall | bash
+apt-get -y install libxml2-dev graphviz libgd2-noxpm-dev postgresql-8.4 libdbd-pg-perl
 
 # Enable RVM for all users
-(cat <<'EOP'
-export PERLBREW_ROOT="/opt/perlbrew"
-[[ -s "$PERLBREW_ROOT/etc/bashrc" ]] && source "$PERLBREW_ROOT/etc/bashrc"
-$PERLBREW_ROOT/bin/perlbrew switch perl-5.14.2
-EOP
-) > /etc/profile.d/perlbrew.sh
-
-rm -rf ~vagrant/.perlbrew
-
 bash -c '
  source /etc/profile
- perlbrew install -n $INSTALL_PERL_VERSION
- perlbrew switch perl-$INSTALL_PERL_VERSION
  curl -kL cpanmin.us | perl - -n App::cpanminus
 '
 
