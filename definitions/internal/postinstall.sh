@@ -64,32 +64,32 @@ rm -rf /tmp/RT_install
 ###############################
 
 ## Set ruby version to be installed
-#export INSTALL_RUBY_VERSION=1.9.2-p320
-#
-## Install RVM
-#curl -L get.rvm.io | bash -s stable
-#
-## Enable RVM for all users
-#(cat <<'EOP'
-#[[ -s "/usr/local/rvm/scripts/rvm" ]] && source "/usr/local/rvm/scripts/rvm"
-#EOP
-#) > /etc/profile.d/rvm.sh
-#echo "gem: --no-rdoc --no-ri" > /home/vagrant/.gemrc
-#chown vagrant:vagrant /home/vagrant/.gemrc
-#
-## Install Ruby using RVM
-#echo "Installing $INSTALL_RUBY_VERSION as default ruby"
-#bash -c '
-# source /etc/profile
-# rvm install $INSTALL_RUBY_VERSION
-# rvm alias create default ruby-$INSTALL_RUBY_VERSION
-# rvm use $INSTALL_RUBY_VERSION --default
-#
-# echo "Installing chef and puppet gems"
-# gem install --no-rdoc --no-ri chef puppet
-# 
-# # Clean up rvm install
-# rvm cleanup all'
+export INSTALL_RUBY_VERSION=1.9.2-p320
+
+# Install RVM
+curl -L get.rvm.io | bash -s stable
+
+# Enable RVM for all users
+(cat <<'EOP'
+[[ -s "/usr/local/rvm/scripts/rvm" ]] && source "/usr/local/rvm/scripts/rvm"
+EOP
+) > /etc/profile.d/rvm.sh
+echo "gem: --no-rdoc --no-ri" > /home/vagrant/.gemrc
+chown vagrant:vagrant /home/vagrant/.gemrc
+
+# Install Ruby using RVM
+echo "Installing $INSTALL_RUBY_VERSION as default ruby"
+bash -c '
+ source /etc/profile
+ rvm install $INSTALL_RUBY_VERSION
+ rvm alias create default ruby-$INSTALL_RUBY_VERSION
+ rvm use $INSTALL_RUBY_VERSION --default
+
+ echo "Installing chef and puppet gems"
+ gem install --no-rdoc --no-ri chef puppet
+ 
+ # Clean up rvm install
+ rvm cleanup all'
 
 # Add the vagrant user to the rvm group
 usermod -a -G rvm vagrant
