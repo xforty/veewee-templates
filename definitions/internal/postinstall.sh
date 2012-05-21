@@ -57,6 +57,7 @@ curl http://download.bestpractical.com/pub/rt/release/rt-4.0.5.tar.gz | tar zx
 cd rt-4.0.5
 ./configure --enable-devel-mode --enable-layout=inplace --enable-graphviz --enable-gd --enable-gpg
 RT_FIX_DEPS_CMD='cpanm --quiet --notest' make fixdeps
+cd
 rm -rf /tmp/RT_install
 
 ###############################
