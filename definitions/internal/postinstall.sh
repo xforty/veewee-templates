@@ -96,6 +96,12 @@ bash -c '
 usermod -a -G rvm vagrant
 
 ###############################
+# ADEMPIERE
+###############################
+
+apt-get install -y libreadline5 libreadline5-dev build-essential bc subversion default-jdk unzip bison flex
+
+###############################
 # CLEAN UP
 ###############################
 
