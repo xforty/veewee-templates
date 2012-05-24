@@ -102,6 +102,12 @@ usermod -a -G rvm vagrant
 apt-get install -y libreadline5 libreadline5-dev build-essential bc subversion default-jdk unzip bison flex
 
 ###############################
+# STREAMS
+###############################
+
+apt-get install -y postgresql-server-dev-8.4 libldap2-dev libsasl2-dev
+
+###############################
 # CLEAN UP
 ###############################
 
