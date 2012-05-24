@@ -61,6 +61,11 @@ cd
 rm -rf /tmp/RT_install
 
 ###############################
+# SOME SSH SETTINGS
+###############################
+echo "    StrictHostKeyChecking no" >> /etc/ssh/ssh_config
+
+###############################
 # INSTALL RVM, RUBY, GEMS
 ###############################
 
