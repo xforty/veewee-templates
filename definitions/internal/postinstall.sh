@@ -113,6 +113,12 @@ apt-get install -y libreadline5 libreadline5-dev build-essential bc subversion d
 apt-get install -y postgresql-server-dev-8.4 libldap2-dev libsasl2-dev
 
 ###############################
+# HTTP PROXYING
+###############################
+
+apt-get install -y nginx
+
+###############################
 # CLEAN UP
 ###############################
 
