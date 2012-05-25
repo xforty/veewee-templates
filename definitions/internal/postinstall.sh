@@ -6,11 +6,11 @@
 date > /etc/vagrant_box_build_time
 
 # Update and upgrade packages
-apt-get -y update
-apt-get -y upgrade
+apt-get -q -y update
+apt-get -q -y upgrade
 
 # Some convenient development tools
-apt-get -y install vim screen tmux git-core
+apt-get -q -y install vim screen tmux git-core
 
 # Setup sudo to allow no-password sudo for "admin"
 cp /etc/sudoers /etc/sudoers.orig
@@ -43,7 +43,7 @@ chown -R vagrant /home/vagrant/.ssh
 ###############################
 
 # Some dev libraries
-apt-get -y install libxml2-dev graphviz libgd2-noxpm-dev postgresql-8.4 libdbd-pg-perl
+apt-get -q -y install libxml2-dev graphviz libgd2-noxpm-dev postgresql-8.4 libdbd-pg-perl
 
 # Enable RVM for all users
 bash -c '
@@ -104,27 +104,27 @@ usermod -a -G rvm vagrant
 # ADEMPIERE
 ###############################
 
-apt-get install -y libreadline5 libreadline5-dev build-essential bc subversion default-jdk unzip bison flex
+apt-get install -q -y libreadline5 libreadline5-dev build-essential bc subversion default-jdk unzip bison flex
 
 ###############################
 # STREAMS
 ###############################
 
-apt-get install -y postgresql-server-dev-8.4 libldap2-dev libsasl2-dev
+apt-get install -q -y postgresql-server-dev-8.4 libldap2-dev libsasl2-dev
 
 ###############################
 # HTTP PROXYING
 ###############################
 
-apt-get install -y nginx
+apt-get install -q -y nginx
 
 ###############################
 # CLEAN UP
 ###############################
 
 # Clean up packages that are no longer needed
-apt-get -y autoremove
-apt-get -y clean
+apt-get -q -y autoremove
+apt-get -q -y clean
 
 # Clear out tmp
 rm -rf /tmp/* /tmp/.??*
