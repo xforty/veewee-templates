@@ -3,6 +3,8 @@
 # PREPARE NEWLY INSTALLED OS
 ###############################
 
+export PAGER=cat
+
 date > /etc/vagrant_box_build_time
 
 # Update and upgrade packages
