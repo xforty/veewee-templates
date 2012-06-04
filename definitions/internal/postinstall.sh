@@ -50,12 +50,12 @@ apt-get -q -y install libxml2-dev graphviz libgd2-noxpm-dev postgresql-8.4 libdb
 # Enable RVM for all users
 bash -c '
  source /etc/profile
- curl -kL cpanmin.us | perl - -q -n App::cpanminus
+ curl -s -kL cpanmin.us | perl - -q -n App::cpanminus
 '
 
 cd /tmp
 mkdir RT_install; cd RT_install
-curl http://download.bestpractical.com/pub/rt/release/rt-4.0.5.tar.gz | tar zx
+curl -s http://download.bestpractical.com/pub/rt/release/rt-4.0.5.tar.gz | tar zx
 cd rt-4.0.5
 ./configure --enable-devel-mode --enable-layout=inplace --enable-graphviz --enable-gd --enable-gpg
 RT_FIX_DEPS_CMD='cpanm --quiet --notest' make fixdeps
@@ -75,7 +75,7 @@ echo "    StrictHostKeyChecking no" >> /etc/ssh/ssh_config
 export INSTALL_RUBY_VERSION=1.9.2-p320
 
 # Install RVM
-curl -L get.rvm.io | bash -s stable
+curl -s -L get.rvm.io | bash -s stable
 
 # Enable RVM for all users
 (cat <<'EOP'
