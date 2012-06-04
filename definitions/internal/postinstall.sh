@@ -89,7 +89,7 @@ chown vagrant:vagrant /home/vagrant/.gemrc
 echo "Installing $INSTALL_RUBY_VERSION as default ruby"
 bash -c '
  source /etc/profile
- rvm install $INSTALL_RUBY_VERSION
+ /usr/local/rvm/bin/rvm install $INSTALL_RUBY_VERSION
  rvm alias create default ruby-$INSTALL_RUBY_VERSION
  rvm use $INSTALL_RUBY_VERSION --default
 
