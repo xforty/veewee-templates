@@ -50,7 +50,7 @@ apt-get -q -y install libxml2-dev graphviz libgd2-noxpm-dev postgresql-8.4 libdb
 # Enable RVM for all users
 bash -c '
  source /etc/profile
- curl -kL cpanmin.us | perl - -n App::cpanminus
+ curl -kL cpanmin.us | perl - -q -n App::cpanminus
 '
 
 cd /tmp
