@@ -32,7 +32,7 @@ with Vagrant.
 ### Add Base Box to Vagrant ###
 
 1. `vagrant box add <my_box_name> <url_or_filepath_to_basebox>`
-    * [More documentation for vagrant boxes](http://vagrantup.com/docs/boxes.html)
+    * [More documentation for vagrant boxes](http://vagrantup.com/v1/docs/boxes.html)
 
 ### Example ###
 
