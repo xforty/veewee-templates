@@ -38,7 +38,7 @@ with Vagrant.
 
     git clone git://github.com/xforty/veewee-templates.git
     cd veewee-templates
-    veewee vbox build ubuntu-10.04.4-server-amd64
-    veewee vbox validate ubuntu-10.04.4-server-amd64
-    vagrant basebox export ubuntu-10.04.4-server-amd64
-    vagrant box add ubuntu-10.04.4-server-amd64 ubuntu-10.04.4-server-amd64.box
+    veewee vbox build ubuntu-12.04.1-server-amd64
+    veewee vbox validate ubuntu-12.04.1-server-amd64
+    vagrant basebox export ubuntu-12.04.1-server-amd64
+    vagrant box add ubuntu-12.04.1-server-amd64 ubuntu-12.04.1-server-amd64.box
