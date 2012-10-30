@@ -11,8 +11,8 @@ with Vagrant.
 * [VirtualBox](http://www.virtualbox.org) >= 4.1.0
 * [Vagrant gem](http://www.vagrantup.com) >= 1.0
     * `gem install vagrant`
-* [Veewee gem](https://github.com/jedi4ever/veewee) >= 0.3.0 (currently, it's in prerelease)
-    * `gem install veewee --pre`
+* [Veewee gem](https://github.com/jedi4ever/veewee) >= 0.3.0
+    * `gem install veewee`
 
 ### Build New Base Box ###
 
